@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ChatMeister (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "ChatMeister (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

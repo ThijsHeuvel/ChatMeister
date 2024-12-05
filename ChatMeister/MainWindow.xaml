@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="ChatMeister.MainWindow"
+    xmlns:localData="using:ChatMeister.Data"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ChatMeister"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20">
+        <TextBlock Text="Chat" FontSize="50" Margin="0, 0, 0, 20"/>
+        <ListView x:Name="chatListView" IsItemClickEnabled="True" ItemClick="chatListView_ItemClick">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="localData:Chat">
+                    <StackPanel Orientation="Vertical" Spacing="10" Margin="20">
+                        <TextBlock Text="{x:Bind Name}" FontSize="40"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
+</Window>
